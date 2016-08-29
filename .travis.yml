@@ -20,10 +20,11 @@ before_script:
   # Change database name
  # - psql -c 'create database railsroots_test;' -U postgres
   #- RAILS_ENV=test bundle exec rake db:migrate db:test:prepare
-
+#- chmod +x build_travis.sh
 script:
+ - bundle exec rubocop
 #  - bundle exec rake code_analysis
 #- bundle exec rake spec
 
-- chmod +x build_travis.sh
-script: "./build_travis.sh"
+#"./build_travis.sh"
+ 
